@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin_manifest>
-        <field key="author" value="Mauricio Bumba" />
-        <field key="version" value="1.9.4.0" />
-        <field key="description" value="Friend invite page using openinviter" />
-        <field key="website" value="http://www.elgg.org/" />
-        <field key="copyright" value="(C) Mauricio Bumba 2010-2011" />
-        <field key="licence" value="GNU Public License version 2" />
-        <field key="elgg_version" value="2010030101" />
+<plugin_manifest xmlns="http://www.elgg.org/plugin_manifest/1.8">
+    <name>Open Inviter</name>
+    <author>Mauricio Bumba original version - Diego Ramirez Elgg 1.8 upgrade</author>
+    <version>1.9.4.1</version>
+    <description>Friend invite page using openinviter</description>
+    <category>api</category>
+    <website>http://www.elgg.org/</website>
+    <copyright>(C) Mauricio Bumba 2010-2011 - Diego Ramrez 2012</copyright>
+    <license>GNU General Public License version 2</license>
+    <requires>
+        <type>elgg_release</type>
+        <version>1.8</version>
+    </requires>
+
+    <conflicts>
+        <type>plugin</type>
+        <name>invitefriends</name>
+    </conflicts>
 </plugin_manifest>

@@ -208,7 +208,7 @@ if (!$done)
 			$contents.="</optgroup>";
 			}
 		$contents.="</select></td></tr>
-			<tr class='thTableImportantRow'><td colspan='2' align='center'><input class='thButton' type='submit' name='import' value='".elgg_echo('oi_invitefriends:openinviter:import_contacts')."'></td></tr>
+			<tr class='thTableImportantRow'><td colspan='2' align='center'><input class='elgg-button elgg-button-submit' type='submit' name='import' value='".elgg_echo('oi_invitefriends:openinviter:import_contacts')."'></td></tr>
 		</table><input type='hidden' name='step' value='get_contacts'>";
 		}
 	else
@@ -216,7 +216,6 @@ if (!$done)
 			/* Modificado - Changed
 			$contents.="<table class='thTable' cellspacing='0' cellpadding='0' style='border:none;'>
 					<tr class='thTableRow'><td align='right' valign='top'><label for='message_box'>Message</label></td><td><textarea rows='5' cols='50' name='message_box' class='thTextArea' style='width:300px;'>{$_POST['message_box']}</textarea></td></tr>
-					<tr class='thTableRow'><td align='center' colspan='2'><input type='submit' name='send' value='Send Invites' class='thButton' ></td></tr>
 				</table>";
 			*/
 			//$contents.="<div class='contentWrapper notitle'>";
@@ -229,7 +228,8 @@ if (!$done)
 			//$contents.="</div>";
 		}
 	}
-$contents.="<center><a href='http://openinviter.com/'><img src='http://openinviter.com/images/banners/banner_blue_1.gif?nr=47506' border='0' alt='Powered by OpenInviter.com' title='Powered by OpenInviter.com'></a></center>";
+	//Removed because the image doesn't exists
+//$contents.="<center><a href='http://openinviter.com/'><img src='http://openinviter.com/images/banners/banner_blue_1.gif?nr=47506' border='0' alt='Powered by OpenInviter.com' title='Powered by OpenInviter.com'></a></center>";
 if (!$done)
 	{
 	if ($step=='send_invites')
@@ -251,7 +251,7 @@ if (!$done)
 					$odd=!$odd;
 					}
 				/* Modificado - Changed
-				$contents.="<tr class='thTableFooter'><td colspan='".($plugType=='email'? "3":"2")."' style='padding:3px;'><input type='submit' name='send' value='Send invites' class='thButton'></td></tr>";
+				$contents.="<tr class='thTableFooter'><td colspan='".($plugType=='email'? "3":"2")."' style='padding:3px;'><input type='submit' name='send' value='Send invites' class='elgg-button elgg-button-submit'></td></tr>";
 				*/
 				$contents.="<tr class='thTableFooter'><td colspan='".($plugType=='email'? "3":"2")."' style='padding:3px;'>".elgg_view('input/submit', array('value' => elgg_echo('send')))."</td></tr>";
 				}
