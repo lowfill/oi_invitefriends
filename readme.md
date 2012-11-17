@@ -7,13 +7,15 @@ You can, in the same form, invite your friends in the old way, typing one e-mail
 Features:
 ---------
 
-Invite messages uses the same layout from original invitefriends plugins.
-Send invite codes in the message. (Allow mutual friendships in registration).
-Multilanguage support. (English and Brazilian Portuguese in the package).
-Only two files were changed. Future upgrades will be easier.
-Installing:
+- Invite messages uses the same layout from original invitefriends plugins.
+- Send invite codes in the message. (Allow mutual friendships in registration).
+- Multilanguage support. (English and Brazilian Portuguese in the package).
+- Only two files were changed. Future upgrades will be easier.
 
-Unzip the plugin in the "mod" folder, download the latest version of Openinviter API from http://openinviter.com/download.php and unzip in the \vendor\openinviter folder.  
+Installing:
+-----------
+
+Unzip the plugin in the "mod" folder, download the latest version of Openinviter API from http://openinviter.com/download.php and unzip in the `\vendor\openinviter` folder.  
 
 Configuring:
 ------------
@@ -22,52 +24,34 @@ Disable the original Invitefriends plugin. Edit the file \vendor\openinviter\con
 
 Example:
 
-<?php
-
-$openinviter_settings=array(       
-
-"username"=>"YourUserName", //Your login in the openinviter website.    
-
-"private_key"=>"YourPrivateKey", //Your private key.       
-
-"cookie_path"=>'/home/admin/tmp', //Path to store cookies and plugin cache.       
-
-"message_body"=>" "       
-
-"message_subject"=>" "       
-
-"transport"=>"curl", //You can use wget too       
-
-"local_debug"=>"on_error",       
-
-"remote_debug"=>FALSE,       
-
-"hosted"=>FALSE,       
-
-"proxies"=>array(),       
-
-"stats"=>TRUE,       
-
-"plugins_cache_time"=>1800,       
-
-"plugins_cache_file"=>"oi_plugins.php", //Plugin cache filename.       
-
-"update_files"=>false,       
-
-"stats_user"=>"", //Required to access the stats       
-
-"stats_password"=>"" //Required to access the stats    );   
-
-?>
+    <?php
+    $openinviter_settings=array(       
+		"username"=>"YourUserName", //Your login in the openinviter website.    
+		"private_key"=>"YourPrivateKey", //Your private key.       
+		"cookie_path"=>'/home/admin/tmp', //Path to store cookies and plugin cache.       
+		"message_body"=>" "       
+		"message_subject"=>" "       
+		"transport"=>"curl", //You can use wget too       
+		"local_debug"=>"on_error",       
+		"remote_debug"=>FALSE,       
+		"hosted"=>FALSE,       
+		"proxies"=>array(),       
+		"stats"=>TRUE,       
+		"plugins_cache_time"=>1800,       
+		"plugins_cache_file"=>"oi_plugins.php", //Plugin cache filename.       
+		"update_files"=>false,       
+		"stats_user"=>"", //Required to access the stats       
+		"stats_password"=>"" //Required to access the stats    );   
+	?>
 
 Final notes:
 ------------
 
-This plugin was writen from scratch, merging a elgg plugin and a openinviter api example. Only one file from original Invitefriends plugin was changed: \views\default\oi_invitefriends\form.php. 
+This plugin was writen from scratch, merging a elgg plugin and a openinviter api example. Only one file from original Invitefriends plugin was changed: `\views\default\oi_invitefriends\form.php`. 
 
 I added the line 
 
-"include($CONFIG->pluginspath . "oi_invitefriends/oi_invitefriends.php");". 
+> `include($CONFIG->pluginspath . "oi_invitefriends/oi_invitefriends.php");` 
 
 This will make future upgrades easier.
 
